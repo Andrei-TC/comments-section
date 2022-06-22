@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --p-Moderate-blue: hsl(238, 40%, 52%);
+  --p-Soft-Red: hsl(358, 79%, 66%);
+  --p-Light-grayish-blue: hsl(239, 57%, 85%);
+  --p-Pale-red: hsl(357, 100%, 86%);
+  --n-Dark-blue: hsl(212, 24%, 26%);
+  --n-Grayish-Blue: hsl(211, 10%, 45%);
+  --n-Light-gray: hsl(223, 19%, 93%);
+  --n-Very-light-gray: hsl(228, 33%, 97%);
+  --n-White: hsl(0, 0%, 100%);
+  font-family: "Rubik", sans-serif;
+}
+html {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: var(--n-Very-light-gray);
+}
+body {
+  padding: 1rem;
+}
+.comment-container {
+  height: fit-content;
+  background-color: var(--n-White);
+  padding: 1rem;
+  border-radius: 5px;
+}
+.user-info {
+  margin-bottom: 1rem;
+  align-items: center;
+}
+.user-avatar {
+  margin-right: 1rem;
+}
+.user-name {
+  margin-right: 1rem;
+  color: var(--n-Dark-blue);
+  font-weight: 500;
+}
+.created-at {
+  inline-size: 7rem;
+  overflow-wrap: break-word;
+  color: var(--n-Grayish-Blue);
+  font-size: 0.8rem;
+}
+.comment-text {
+  margin-bottom: 1rem;
+  color: var(--n-Grayish-Blue);
+  line-height: 21px;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+.user-action {
+  justify-content: space-between;
+  align-content: center;
+}
+.user-action-buttons {
+  gap: 1rem;
+}
+.user-action-rating {
+  align-items: center;
+}
+.rBtn {
+  border: none;
+  color: var(--p-Light-grayish-blue);
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+.rating-points {
+  text-align: center;
+  align-content: center;
+  color: var(--p-Moderate-blue);
+  font-weight: 500;
+  margin-inline: -2px;
+  border-radius: 2px;
+  z-index: 0;
+}
+.rBtn:hover {
+  background-color: var(--n-Light-gray);
+}
+.rating-points,
+.rBtn {
+  background-color: var(--n-Very-light-gray);
+  width: 30px;
+  height: 35px;
+}
+.rating-plus {
+  border-radius: 5px 0 0 5px;
+}
+.rating-minus {
+  border-radius: 0 5px 5px 0;
+}
+.comments-list-container {
+  gap: 1rem;
+}
+.comment-button {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+}
+.send {
+  color: var(--p-Moderate-blue);
+  cursor: pointer;
+}
+.send::before {
+  content: url(../public/images/icon-reply.svg);
+  margin-right: 0.5rem;
+}
+
+.edit {
+  color: var(--p-Moderate-blue);
+  cursor: pointer;
+}
+
+.edit::before {
+  content: url(../public/images/icon-edit.svg);
+  margin-right: 0.5rem;
+}
+.delete {
+  color: var(--p-Soft-Red);
+  cursor: pointer;
+}
+
+.delete::before {
+  content: url(../public/images/icon-delete.svg);
+  margin-right: 0.5rem;
+}
+.reply-c {
+  gap: 1rem;
+  padding: 0;
+  background: transparent;
+  width: 95%;
+  justify-self: end;
+  position: relative;
+}
+.reply-c.comment-container::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  left: -1rem;
+  top: 0;
+  position: absolute;
+  background-color: var(--n-Light-gray);
+}
+.send-comment-container {
+  margin-top: 1rem;
+}
+
+.replyCommentAction {
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.replyBtn {
+  padding: 0.5rem 1rem;
+  background-color: var(--p-Moderate-blue);
+  color: var(--n-White);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.replyBtn:disabled {
+  background-color: var(--n-Light-gray);
+}
+#replyCommentArea {
+  height: 6ch;
+  border-radius: 5px;
+  border: 1px var(--n-Light-gray) solid;
+  resize: none;
+  padding: 1rem;
+}
+.userBadge {
+  background-color: var(--p-Moderate-blue);
+  color: var(--n-White);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem;
+}
+.replyingTo {
+  color: var(--p-Moderate-blue);
+  font-weight: 600;
+}
+.action-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.cancelBtn {
+  background-color: var(--p-Soft-Red);
+}
